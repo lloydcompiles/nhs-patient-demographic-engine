@@ -20,8 +20,8 @@ After registering or viewing a result, they get Y/N prompts to continue or go ba
 
 ### The Patient details will have the following information:
 - NHS Number (validated to be 10 digits)
-- Last Name, First Name and Prefix (eg Mr/Mrs)
-- Contact Details i.e phone/mobile number and email address
+- Last Name, First Name and Prefix (e.g. Mr/Mrs)
+- Contact Details i.e. phone/mobile number and email address
 - Gender i.e. male, female or other (defaulted to ‘unknown’ if not provided) 
 
 ## Future Ideas
