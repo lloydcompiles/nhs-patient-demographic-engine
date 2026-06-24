@@ -7,18 +7,23 @@ import java.time.LocalDate;
  */
 public class Patient {
 
+    private NhsNumber nhsNumber;
     private HumanName humanName;
     private ContactPoint contactPoint;
     private AdministrativeGender administrativeGender;
     private LocalDate dateOfBirth;
 
-    public Patient(HumanName humanName, ContactPoint contactPoint, AdministrativeGender administrativeGender, LocalDate dateOfBirth) {
+    public Patient(NhsNumber nhsNumber, HumanName humanName, ContactPoint contactPoint, AdministrativeGender administrativeGender, LocalDate dateOfBirth) {
+        this.nhsNumber = nhsNumber;
         this.humanName = humanName;
         this.contactPoint = contactPoint;
         this.administrativeGender = (administrativeGender != null) ? administrativeGender : AdministrativeGender.UNKNOWN;
         this.dateOfBirth = dateOfBirth;
     }
 
+    public NhsNumber getNhsNumber() {
+        return nhsNumber;
+    }
     public HumanName getHumanName() {
         return humanName;
     }
