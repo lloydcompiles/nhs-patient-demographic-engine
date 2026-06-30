@@ -25,6 +25,7 @@ After registering or viewing a result, they get Y/N prompts to continue or go ba
 - Gender i.e. male, female or other (defaulted to ‘unknown’ if not provided) 
 
 ## Future Ideas
+- Add format validation for phone numbers and email addresses
 - GUI Interface
 
 ## Built With
