@@ -35,7 +35,7 @@ public class CliMenu {
                     registerPatient();
                     break;
                 case "2":
-                    // call search method
+                    searchPatient();
                     break;
                 case "3":
                     running = false;
@@ -168,6 +168,36 @@ public class CliMenu {
             String again = scanner.nextLine();
             if (!again.equalsIgnoreCase("Y")) {
                 registering = false;
+            }
+        }
+    }
+
+    private void searchPatient() {
+        boolean searching = true;
+
+        while (searching) {
+            System.out.println("\n--- Search for Patient ---");
+
+            System.out.print("\nEnter NHS Number (10 digits): ");
+            String nhsInput = scanner.nextLine();
+
+            try {
+                NhsNumber nhsNumber = new NhsNumber(nhsInput);
+
+                if (patientRegistry.findByNhsNumber(nhsNumber) != null){
+                    System.out.println(patientRegistry.findByNhsNumber(nhsNumber));
+                } else {
+                    System.out.println("Patient not found.");
+                }
+
+            } catch (InvalidNHSNumberException e) {
+                System.out.println("Error: " + e.getMessage());
+            }
+
+            System.out.print("Search for another patient? (Y/N): ");
+            String again = scanner.nextLine();
+            if (!again.equalsIgnoreCase("Y")) {
+                searching = false;
             }
         }
     }

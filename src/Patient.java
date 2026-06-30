@@ -39,4 +39,12 @@ public class Patient {
     public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }
+
+    @Override
+    public String toString() {
+        return "\nNHS Number: " + getNhsNumber().getValue() + "\nName: " + getHumanName().getPrefix() + " " + getHumanName().getGiven() + " " + getHumanName().getFamily() +
+                "\nContact by " + getContactPoint().getSystem() + ": " + getContactPoint().getValue() +
+                "\nAdministrative Gender: " + getAdministrativeGender() +
+                "\nDate of Birth: " + getDateOfBirth();
+    }
 }
