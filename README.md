@@ -28,6 +28,15 @@ After registering or viewing a result, they get Y/N prompts to continue or go ba
 - Add format validation for phone numbers and email addresses
 - GUI Interface
 
+## Test Data
+Sample patient data in `patients.csv` uses a combination of manually created records
+and synthetic test data sourced from the NHS Personal Demographics Service (PDS) FHIR
+API test data packs, available at:
+https://digital.nhs.uk/developer/api-catalogue/personal-demographics-service-fhir/pds-fhir-api-test-data
+
+Note: Contact details (phone/email) and date formats have been adapted to match the
+application's data model. No real patient data is used.
+
 ## Built With
 - Java
 - IntelliJ IDEA
