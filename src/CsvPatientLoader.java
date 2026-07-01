@@ -5,6 +5,11 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Loads and parses patient records from a CSV file into a List of Patient objects.
+ * Reads the file line by line using BufferedReader, maps each column to the
+ * corresponding domain model field, and skips any rows with invalid NHS numbers.
+ */
 public class CsvPatientLoader {
 
     private String filePath;
