@@ -183,9 +183,11 @@ public class CliMenu {
 
             try {
                 NhsNumber nhsNumber = new NhsNumber(nhsInput);
-
-                if (patientRegistry.findByNhsNumber(nhsNumber) != null){
-                    System.out.println(patientRegistry.findByNhsNumber(nhsNumber));
+                Patient foundPatient = patientRegistry.findByNhsNumber(nhsNumber);
+                if (foundPatient != null){
+                    System.out.println(foundPatient);
+                    PatientFhirJsonBuilder patientJson = new PatientFhirJsonBuilder(foundPatient);
+                    System.out.println(patientJson.buildPatientFhirJson());
                 } else {
                     System.out.println("Patient not found.");
                 }
